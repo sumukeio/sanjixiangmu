@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" 给IE8用的>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" 网页端视口> -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+  <title>20001010834-蒋承翰</title>
+  <link rel="stylesheet" href="./css/pub.css">
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+</head>
+
+<body><!-- 移动端可以大量使用H5的标签 -->
+  <!-- header是有语义的div -->
+  <!-- 有多个header...就加id -->
+  <header>
+    <div>
+      <span class="iconfont icon-find"></span>
+      <input type="text" placeholder="美猴王">
+      <span class="iconfont icon-scan"></span>
+    </div>
+    <span>
+      <a href="#" class="iconfont icon-dianpu"></a>
+    </span>
+    <span>
+      <a href="./message.html" class="iconfont icon-message"></a>
+    </span>
+  </header>
+  <nav id="snav"></nav>
+  <aside><!-- 右侧浮窗-JS效果 -->
+    <div>
+      <a href="#">
+        <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/fuchuang.jpg">
+      </a>
+    </div>
+  </aside>
+  <main>
+    <div class="swiper move">
+      <div class="swiper-wrapper">
+      </div>
+    </div>
+    <img src="./images/shouye/5zhe.png">
+    <ul class="leibie">
+      <li>
+        <a href="#">
+          <img src="./images/shouye/tushu.png">
+          <p>图书</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/tongshu.png">
+          <p>童书</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/xinshubang.png">
+          <p>新书榜</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/nianka.png">
+          <p>买1年送15月</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/dushenme.png">
+          <p>读什么</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/fuzhuang.png">
+          <p>服装</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/fubaihuichang.png">
+          <p>服百会场</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/ertongjie.png">
+          <p>儿童街</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/lingquan.png">
+          <p>领券中心</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/shouye/qiandao.png">
+          <p>签到</p>
+        </a>
+      </li>
+    </ul>
+    <div class="xinren">
+      <div>
+        <span>新人专享区</span>
+        <p>1元包邮/专享礼券/首单送礼包</p>
+        <span>更多></span>
+      </div>
+      <ul class="alist">
+      </ul>
+    </div>
+    <div class="tushu">
+      <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/bottom.jpg">
+    </div>
+  </main>
+  <div class="yhq"><!-- 优惠券提醒-自动关闭-JS效果 -->
+    <img src="https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/youhuiquan.jpg">
+  </div>
+  <nav id="bnav">
+    <ul>
+      <li>
+        <a href="./index.html">
+          <div class="iconfont icon-download"></div>
+          <p>去推荐</p>
+        </a>
+      </li>
+      <li>
+        <a href="./fenlei.html">
+          <div class="iconfont icon-fenlei"></div>
+          <p>分类</p>
+        </a>
+      </li>
+      <li>
+        <a href="./dangdu.html">
+          <div class="iconfont icon-read"></div>
+          <p>当读</p>
+        </a>
+      </li>
+      <li>
+        <a href="./gouwuche.html">
+          <div class="iconfont icon-buy"></div>
+          <p>购物车</p>
+        </a>
+      </li>
+      <li>
+        <a href="./home.html">
+          <div class="iconfont icon-my"></div>
+          <p>我的</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <script><!-- 右侧浮窗的JS -->
+    /* 响应事件应该写为函数，因为只有函数可以重复执行 */
+    const aside = document.querySelector("aside");
+    const img = aside.querySelector("img");
+    img.onmousedown = function() {
+      img.style.display = "none"
+    }
+  </script>
+  <script><!-- 优惠券提醒的JS -->
+    //获取元素
+    const yhq = document.querySelector('.yhq')
+    //倒计时
+    let count = 5
+    //定时器
+    let n = setInterval(function(){
+      count--
+      if(count === 0) {
+        clearInterval(n)
+        yhq.style.display = "none"
+      }
+    }, 1000)
+  </script>
+  <script>//新人专享区的JSON
+    // var jarr = [
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/b1.png",
+    //     title:"雾都孤儿",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/b2.png",
+    //     title:"审判(卡夫卡...",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/b3.png",
+    //     title:"人间词话",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/book4.png",
+    //     title:"你是人间四月天",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/book5.png",
+    //     title:"人性的弱点",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/book6.png",
+    //     title:"儒林外史",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/book7.png",
+    //     title:"罗生门(芥川...",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/b1.png",
+    //     title:"雾都孤儿",
+    //     price:"￥1",
+    //     buy:"抢"
+    //   }
+    // ]
+
+    var url = "http://rap2api.taobao.org/app/mock/308883/index";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);/* GET请求，true表示异步 */
+    xhr.send();/* 建立链接*/
+    xhr.onreadystatechange = function () {/* 监听 */
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var jarr = JSON.parse(xhr.responseText);/* 将从服务器端获得的数据转为JSON */
+        // console.log(xhr.responseText);
+        insert2(jarr);
+      }
+    }
+
+    function insert2(jarr) {
+      var alist = document.querySelector(".alist");
+      console.log(alist);
+      jarr.forEach((v, i) => {
+        var nli = document.createElement("li")
+        console.log(nli);/* 无 */
+        nli.innerHTML = `
+          <a href="#">
+            <img src="${v.img}">
+            <p>${v.title}</p>
+            <div>
+              <span>${v.price}</span>
+              <span>${v.buy}</span>
+            </div>
+          </a>`;
+          alist.appendChild(nli);
+      })
+      
+    }
+  </script>
+  <script>//顶部滚动栏的JSON
+    // var data = [
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider1.jpg"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider2.jpg"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider3.jpg"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider4.jpg"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider5.jpg"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider6.jpg"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider7.jpg"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/slider8.jpg"
+    //   }
+    // ]
+    var url2 = "http://rap2api.taobao.org/app/mock/308883/index2";
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open("GET", url2, true);
+    xhr2.send();
+    xhr2.onreadystatechange = function () {
+      if (xhr2.readyState == 4 && xhr2.status == 200) {
+        var data = JSON.parse(xhr2.responseText);
+        // console.log(xhr2.responseText);
+        insert(data);//把服务器端的数据插入到本地
+      }
+    }
+
+    function insert(data) {
+      var swiper = document.querySelector(".swiper-wrapper");
+      data.forEach((v, i) => {
+        var ndiv = document.createElement("div")
+        // console.log(ndiv);
+        ndiv.innerHTML = `
+          <a href="#">
+            <img src="${v.img}">
+          </a>`;
+        ndiv.className = "swiper-slide"
+        swiper.appendChild(ndiv);
+      })
+      
+    }
+    
+
+
+  </script>
+  <!-- 顶部滚动栏的JS -->
+  <script src="./js/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".move", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>

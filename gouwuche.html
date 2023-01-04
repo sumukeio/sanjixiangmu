@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20001010834-蒋承翰</title>
+  <link rel="stylesheet" href="./css/pub.css">
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <style>
+    body {
+      background-color: #f0f0f0c5;
+    }
+
+    /* 以下是头部的css */
+    header {
+      display: flex;
+      background-color: #fff;
+    }
+
+    header span:first-child {
+      display: flex;
+      /* text-align: center; */
+      margin: 0 auto;
+      line-height: 10vw;
+    }
+
+    header span:first-child h3 {
+      font-size: 5vw;
+      padding: 0 4px;
+    }
+
+    header span:first-child a {
+      line-height: 10vw;
+    }
+
+    header span:nth-child(2) {
+      text-align: right;
+      line-height: 10vw;
+      font-size: 3vw;
+    }
+
+    body>img {
+      width: 100%;
+      margin: 0 8px;
+    }
+
+
+    /* 以下是主要内容的css */
+    main>div {
+      padding: 8px 0;
+    }
+
+    main>div p {
+      text-align: center;
+    }
+
+    main>div p:first-child {
+      font-weight: bold;
+      font-size: 4vw;
+    }
+
+    main>div p:nth-child(2) {
+      color: grey;
+      font-size: 2vw;
+    }
+
+    main>ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    main>ul li {
+      width: 47%;
+      padding: 4px;
+      flex-grow: 1;
+    }
+
+    main>ul li:nth-child(4) a>p {
+      line-height: 13vw;
+    }
+
+    main li a>p {
+      font-size: 4vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    main li a img {
+      width: 100%;
+    }
+
+    main li a>div {
+      display: flex;
+      padding-top: 10px;
+    }
+
+    main li a>div span:nth-child(2) {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    main li a>div span:first-child {
+      /* text-align: left; */
+      color: rgb(196, 10, 10);
+      font-size: 4vw;
+      flex-grow: 1;
+    }
+
+    /* 以下是底部导航的css */
+    #bnav {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f1f1f1;
+      /* 一定要设，没有则设为白色 */
+      z-index: 9;
+      /*z轴的索引  固定定位的元素和绝对定位的元素重合在一起时，
+      谁挡住谁，z-index大的在上方  */
+    }
+
+    #bnav ul {
+      display: flex;
+    }
+
+    #bnav li {
+      width: 20%;
+      text-align: center;
+    }
+
+    #bnav div {
+      font-size: 6vw;
+      margin: 0 auto;
+    }
+
+    #bnav p {
+      font-size: 14px;
+      line-height: 24px;
+      color: #000;
+    }
+
+    #bnav li:nth-child(4) div,
+    #bnav li:nth-child(4) p {
+      color: #fd6662;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <span>
+      <h3>购物车</h3>
+      <a href="#" class="iconfont icon-locate"></a>
+    </span>
+    <span>
+      <a href="#" class="iconfont icon-more"></a>
+    </span>
+
+  </header>
+  <img src="./images/gouwuche/xuanchuan.png" alt="">
+  <main>
+    <div>
+      <p>· 当 / 当 / 为 / 您 / 推 / 荐 ·</p>
+      <p>RECOMMENDED FOR YOU</p>
+    </div>
+    <!-- 以下内容使用json 
+      只需要一个li，然后用js-->
+    <ul class="alist">
+      <!-- <li>
+        <a href="#">
+          <img src="./images/gouwuche/1.png" alt="">
+          <p>肖秀荣2023考研政治【冲刺8套卷】 现货速发</p>
+          <div>
+            <span>￥28.90</span>
+            <span class="iconfont icon-buy"></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/gouwuche/2.png">
+          <p>肖秀荣2023考研政治【终极预测4套卷】 肖秀荣4套卷</p>
+          <div>
+            <span>￥22.40</span>
+            <span href="#" class="iconfont icon-buy"></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/gouwuche/3.png" alt="">
+          <p>带着故乡去流浪(献给所有的异乡人! 卸下皮囊，回归故乡，...)</p>
+          <div>
+            <span>￥22.40</span>
+            <span class="iconfont icon-buy"></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/gouwuche/4.png" alt="">
+          <p>徐涛2023考研政治优题库习题版黄皮书系列(可搭配核心考...)</p>
+          <div>
+            <span>￥57.90</span>
+            <span class="iconfont icon-buy"></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/gouwuche/1.png" alt="">
+          <p>肖秀荣2023考研政治【冲刺8套卷】 现货速发</p>
+          <div>
+            <span>￥28.90</span>
+            <span class="iconfont icon-buy"></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/gouwuche/1.png" alt="">
+          <p>肖秀荣2023考研政治【冲刺8套卷】 现货速发</p>
+          <div>
+            <span>￥28.90</span>
+            <span class="iconfont icon-buy"></span>  
+          </div>
+        </a>
+      </li> -->
+    </ul>
+  </main>
+
+
+
+  <nav id="bnav">
+    <ul>
+      <li>
+        <a href="./index.html">
+          <div class="iconfont icon-home"></div>
+          <p>首页</p>
+        </a>
+      </li>
+      <li>
+        <a href="./fenlei.html">
+          <div class="iconfont icon-fenlei"></div>
+          <p>分类</p>
+        </a>
+      </li>
+      <li>
+        <a href="./dangdu.html">
+          <div class="iconfont icon-read"></div>
+          <p>当读</p>
+        </a>
+      </li>
+      <li>
+        <a href="./gouwuche.html">
+          <div class="iconfont icon-buy"></div>
+          <p>购物车</p>
+        </a>
+      </li>
+      <li>
+        <a href="./home.html">
+          <div class="iconfont icon-my"></div>
+          <p>我的</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script>
+    /* 本地JSON数据 */
+    // var jarr=[{
+    //   img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/1.png",
+    //   title:"肖秀荣2023考研政治【冲刺8套卷】 现货速发",
+    //   price:"￥28.90"
+    // },
+    // {
+    //   img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/2.png",
+    //   title:"肖秀荣2023考研政治【终极预测4套卷】 肖秀荣4套卷",
+    //   price:"￥22.40"
+    // },
+    // {
+    //   img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/3.png",
+    //   title:"带着故乡去流浪(献给所有的异乡人! 卸下皮囊，回归故乡，...)",
+    //   price:"￥22.40"
+    // },
+    // {
+    //   img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/4.png",
+    //   title:"徐涛2023考研政治优题库习题版黄皮书系列(可搭配核心考...)",
+    //   price:"￥57.90"
+    // },
+    // {
+    //   img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/1.png",
+    //   title:"肖秀荣2023考研政治【冲刺8套卷】 现货速发",
+    //   price:"￥28.90"
+    // },
+    // {
+    //   img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/1.png",
+    //   title:"肖秀荣2023考研政治【冲刺8套卷】 现货速发",
+    //   price:"￥28.90"
+    // }]
+
+
+    // //DOM:
+    // var jlist=document.querySelector(".jlist");
+
+    // jarr.forEach((v, i)=>{
+    //   var nli=document.createElement("li");
+    //   nli.innerHTML=`
+    //     <a href="#">
+    //         <img src="${v.img}">
+    //         <p>${v.title}</p>
+    //         <div>
+    //           <span>${v.price}</span>
+    //           <span class="iconfont icon-buy"></span>  
+    //         </div>
+    //       </a>`;
+    //   jlist.appendChild(nli)/* 在jlist内部的最后增加一个li */
+    // })
+
+
+    /* 服务器JSON数据 */
+    var url = "http://rap2api.taobao.org/app/mock/308883/gouwuche";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var jarr = JSON.parse(xhr.responseText);
+        insert(jarr);/* 自定义函数 */
+      }
+    }
+
+    function insert(jarr) {
+      var alist = document.querySelector(".alist");
+      jarr.forEach((v, i) => {
+        var nli = document.createElement("li")
+        nli.innerHTML = `
+          <a href="#">
+            <img src="${v.img}">
+            <p>${v.title}</p>
+            <div>
+              <span>${v.price}</span>
+              <span class="iconfont icon-buy"></span>  
+            </div>
+          </a>`;
+          alist.appendChild(nli);
+      })
+      
+    }
+  </script>
+</body>
+
+</html>

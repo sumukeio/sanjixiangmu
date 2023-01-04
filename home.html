@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pub.css">
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <style>
+    body {
+      background-color: #f0f0f0c5;
+      margin-bottom: 100px;/* 一旦设了固定定位，就必须给设body这个。
+      因为若页面充满，固定定位的内容就不会显示 */
+    }
+    p,h3 {
+      font-size: 3.5vw;
+    }
+    /* 以下是头部的css */
+    header {
+      display: flex;
+      padding-top: 10px;
+      margin: 0 10px;
+      flex-wrap: nowrap;
+    }
+    .renwu {
+      display: flex;
+      flex-grow: 1;
+    }
+    .renwu img {
+      height: 50px;
+      width: 50px;
+    }
+    .renwu span {
+      padding-left: 15px;
+      line-height: 20px;
+    }
+
+    .right {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .iconfont {
+      font-size: 5.4vw;
+    }
+    .icon-find,
+    .icon-message,
+    .icon-shezhi {
+      padding-right: 20px;
+    }
+
+    /* 以下是三个小模块的css */
+    .san {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 10px;
+      margin: 0 10px;
+    }
+    .san li {
+      flex-grow: 1;
+      line-height: 1.7rem;
+      text-indent: .5rem;
+    }
+    .san li:first-child {
+      background-color: orange;
+    }
+    .san li:first-child a {
+      color: #fff;
+    }
+    .san li:nth-child(2) {
+      margin-left: 10px;
+      background-color: pink;
+    }
+    .san li:nth-child(2) a {
+      color: #000;
+    }
+    .san li:nth-child(3) {
+      margin-left: 10px;
+      background-color: skyblue;
+    }
+    .san li:nth-child(3) a {
+      color: #fff;
+    }
+
+    /* 以下是商品收藏栏的css */
+    main {
+      padding-top: 20px;
+    }
+    .shoucang,
+    .fukuan,
+    .liquan,
+    .choujiang,
+    .head,
+    .du {
+      border-radius: 1vw;
+    }/* 边框圆角 */
+
+    .shoucang {
+      display: flex;
+      background-color: #fff;
+      margin: 0 10px;
+      border-bottom: 1px solid #f0f0f0c5;
+    }
+    .shoucang a {
+      font-size: 2vw;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+    }
+    .shoucang li {
+      flex-grow: 1;
+    }
+    .fukuan {
+      display: flex;
+      justify-content: space-around;
+      background-color: #fff;
+      margin: 0 10px;
+    }
+    .fukuan a {
+      display: block;
+    }
+    .fukuan p {
+      line-height: 8vw;
+      text-align: center;
+    }
+    .fukuan a div {
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    /* 以下是礼券的css */
+    .liquan {
+      display: flex;
+      justify-content: space-around;
+      background-color: #fff;
+      margin: 10px;
+    }
+    .liquan a {
+      display: block;
+      padding: 20px;
+    }
+    .liquan a p {
+      line-height: 6vw;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    /* 以下是抽奖的css */
+    .choujiang {
+      display: flex;
+      margin: 10px;
+      background-color: #fff;
+    }
+    .choujiang li {
+      flex-grow: 1;
+    }
+    .choujiang a p {
+      text-align: center;
+      line-height: 8vw;
+    }
+    .choujiang a img {
+      margin: 0 auto;
+    }
+
+    /* 以下是书单广场的css */
+    .head {
+      display: flex;
+      margin: 0 10px;
+      background-color: #fff;
+    }
+    .head h3 {
+      font-size: 6vw;
+    }
+    .head p {
+      flex-grow: 1;
+      text-align: right;
+      line-height: 8vw;
+    }
+    .shucon {
+      background-color: #fff;
+    }
+    .shucon ul {
+      display: flex;
+    }
+    .shucon li {
+      flex-grow: 1;
+      width: 25%;
+    }
+    .shucon img {
+      width: 100%;
+    }
+    .shucon p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 6vw;
+    }
+
+    .slist li:nth-child(2) p {
+      line-height: 9vw;
+    }
+
+    /* 以下是读什么的css */
+    .du {
+      display: flex;
+      margin: 10px;
+      background-color: #fff;
+    }
+    .du h3 {
+      font-size: 6vw;
+    }
+    .du p {
+      flex-grow: 1;
+      text-align: right;
+      line-height: 8vw;
+    }
+    .shenme {
+      display: flex;
+      justify-content: space-around;
+      background-color: #fff;
+    }
+    .shenme img {
+      width: 50%;
+    }
+
+    /* 以下是下导航 */
+    #bnav {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f1f1f1;/* 一定要设，没有则设为白色 */
+      z-index: 9;/*z轴的索引  固定定位的元素和绝对定位的元素重合在一起时，
+      谁挡住谁，z-index大的在上方  */
+    }
+    #bnav ul {
+      display: flex;
+    }
+    #bnav li{
+      width: 20%;
+      text-align: center;
+    }
+    #bnav div {
+      font-size: 6vw;
+      margin: 0 auto;
+    }
+    #bnav p {
+      font-size: 14px;
+      line-height: 24px;
+      color: #000;
+    }
+    #bnav li:nth-child(5) div,
+    #bnav li:nth-child(5) p {
+      color: #fd6662;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="renwu">
+      <img src="./images/touxiang.png">
+      <span>
+        <h3>198****7821</h3>
+        <p>暂无购书 · 暂无藏书</p>
+      </span>
+    </div>
+    <div class="right">
+      <span class="iconfont icon-find"></span>
+      <a href="./message.html" class="iconfont icon-message"></a>
+      <span class="iconfont icon-shezhi"></span>
+    </div>
+  </header>
+  <ul class="san">
+    <li>
+      <a>
+        <h3>签到领银铃铛</h3>
+        <p>连签获额外奖励</p>
+      </a>
+    </li>
+    <li>
+      <a>
+        <h3>阅世界通行证</h3>
+        <p>明日之星</p>
+      </a>
+    </li>
+    <li>
+      <a>
+        <h3>藏书阁</h3>
+        <p>阅读丈量世界</p>
+      </a>
+    </li> 
+  </ul>
+  <main>
+    <ul class="shoucang">
+      <li>
+        <a href="#">
+          <span class="iconfont icon-shoucang"></span>
+          <span>商品收藏 0</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="iconfont icon-dianpu"></span>
+          <span>关注店铺 0</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="iconfont icon-liulanjilu"></span>
+          <span>浏览记录 6</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="fukuan">
+      <li>
+        <a href="#">
+          <div class="iconfont icon-daifukuan"></div>
+          <p>待付款</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="iconfont icon-daishouhuo"></div>
+          <p>待收货</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="iconfont icon-daipingjia"></div>
+          <p>待评价</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="iconfont icon-tuikuan"></div>
+          <p>退款/售后</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="iconfont icon-dingdan"></div>
+          <p>全部订单</p>
+        </a>
+      </li>
+    </ul>
+    <ul class="liquan">
+      <a href="#">
+        <p>0</p>
+        <p>礼券</p>
+      </a>
+      <a href="#">
+        <p>0</p>
+        <p>金/银铃铛</p>
+      </a>
+      <a href="#">
+        <p>0</p>
+        <p>礼品卡</p>
+      </a>
+      <a href="#">
+        <p>0</p>
+        <p>余额</p>
+      </a>
+      <a href="#">
+        <p>0</p>
+        <p>红包</p>
+      </a>
+    </ul>
+    <ul class="choujiang">
+      <li>
+        <a href="#">
+          <img src="./images/mianfeichoujiang.png"></img>
+          <p>免费抽奖</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/yuedudaka.png"></img>
+          <p>阅读打卡</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/daihuoyongjin.png"></img>
+          <p>带货佣金</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/0yuanling.png"></img>
+          <p>0元领</p>
+        </a>
+      </li>
+    </ul>
+    <div class="shudan">
+      <!-- 此处由json填充，只做框架 -->
+      <div class="head">
+        <h3>书单广场</h3>
+        <p><a>书友高赞 ></a></p>
+      </div>
+      <div class="shucon">
+        <ul class="slist">
+          
+        </ul>
+      </div>
+    </div>
+    <div class="dushenme">
+      <div class="du">
+        <h3>读什么</h3>
+        <p><a>不知道读什么就来“读什么”   ></a></p>
+      </div>
+      <div class="shenme">
+        <img src="./images/meirijinju.png">
+        <img src="./images/nianduyuedu.png">
+      </div>
+    </div>
+  </main>
+  <nav id="bnav">
+    <ul>
+      <li>
+        <a href="./index.html">
+          <div class="iconfont icon-home"></div>
+          <p>首页</p>
+        </a>  
+      </li>
+      <li>
+        <a href="./fenlei.html">
+          <div class="iconfont icon-fenlei"></div>
+          <p>分类</p>
+        </a>
+      </li>
+      <li>
+        <a href="./dangdu.html">
+          <div class="iconfont icon-read"></div>
+          <p>当读</p>
+        </a>  
+      </li>
+      <li>
+        <a href="./gouwuche.html">
+          <div class="iconfont icon-buy"></div>
+          <p>购物车</p>
+        </a>    
+      </li>
+      <li>
+        <a href="#">
+          <div class="iconfont icon-my"></div>
+          <p>我的</p>
+        </a>     
+      </li>
+    </ul>
+  </nav>
+  <script>
+    // var jarr = [
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/shudan1.png",
+    //     title:"冬日书单：邂逅初雪之书"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/shudan2.png",
+    //     title:"李诞的书房"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/shudan3.png",
+    //     title:"深圳读书月年度十大好书 | 狼图腾 认知天性"
+    //   },
+    //   {
+    //     img:"https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/9357/shudan1.png",
+    //     title:"2022年最受欢迎的图书榜单"
+    //   }
+    // ]
+
+    /* 服务器JSON数据 */
+    var url = "http://rap2api.taobao.org/app/mock/308883/home";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var jarr = JSON.parse(xhr.responseText);
+        insert(jarr);/* 自定义函数 */
+      }
+    }
+
+    function insert(jarr) {
+      var slist = document.querySelector(".slist");
+      jarr.forEach((v, i) => {
+        var nli = document.createElement("li")
+        nli.innerHTML = `
+        <a href="#">
+              <img src="${v.img}">
+              <p>${v.title}</p>
+            </a>`;      
+          slist.appendChild(nli);
+      })
+      
+    }
+  </script>
+</body>
+</html>
