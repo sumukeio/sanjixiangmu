@@ -1,0 +1,261 @@
+
+      body {
+        background-color: #ededed;
+      }
+
+      /* 以下是头部的css */
+      header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 50;
+      }
+      header>div {
+        display: flex;
+        border-radius: 38px;
+        margin: 10px 20px;
+        flex-grow: 1;
+        line-height: 8vw;
+        background-color: #eee;
+        padding-right: 10px;
+      }
+      .icon-find {
+        color: grey;
+        padding:0 10px;
+        font-size: 4vw;
+      }
+      .icon-scan {
+        font-size: 5vw;
+        line-height: 10vw;
+      }
+      header>div input {
+        flex-grow: 1;
+        border: 1px solid #f0f0f0;
+        background-color: #f0f0f0;
+      }
+      header>a {
+        line-height: 14vw;
+        font-size: 5vw !important;
+        padding-right: 6px;
+        display: block;
+      }
+
+      /* 以下是侧边栏的CSS */
+      aside {
+        position: fixed;
+        left: 0;
+        top: 50px;
+      }
+      .tt li {
+        font-size: 3vw;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        background-color: #f5f5f5;
+        font-weight: bold;
+        user-select: none;
+      }
+      .cur {
+        background-color: #efefef;
+        border-left: 3px solid #f00;
+      }
+      .cur a {
+        color: #f00;
+      }
+
+      /* 以下是主要内容的CSS */
+      .tc {
+        display: none;
+        padding-left: 100px;
+        position: relative;
+        top: 60px;
+      }
+      .tushu {
+        display: block;/* 默认显示的内容 */
+      }
+      /* 主要内容中滚动栏的CSS */
+      .swiper-slide img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+
+      .second {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+      }
+      .third {
+        display: flex;
+        justify-content: space-around;
+        background-color: #f5f5f5;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 0 12px 12px;
+      }
+      .third .left {
+        flex-grow: 1;
+      }
+      .third .left h3 {
+        font-size: 4vw;
+        line-height: 8vw;
+      }
+      .third .left p {
+        font-size: 1.5vw;
+      }
+      .third a {
+        line-height: 12vw;
+        padding-right: 5px;
+      }
+      .jinru {
+        display: flex;
+        background-color: #f5f5f5;
+        border: none;
+        border-radius: 6px;
+        padding: 0 12px;
+      }
+      .jinru span {
+        flex-grow: 1;
+      }
+      .jinru h3 {
+        font-size: 4vw;
+        line-height: 8vw;
+      }
+      .jinru p {
+        font-size: 1.5vw;
+        color: #a3a3a6;
+      }
+      .jinru a {
+        line-height: 15vw;
+        text-align: right;
+      }
+
+
+      .bangdan {
+        background-color: #f5f5f5;
+        margin-top: 10px;
+        border-radius: 6px;
+      }
+      .bangdan h3 {
+        text-align: left;
+        font-size: 4vw;
+        line-height: 15vw;
+        padding-left: 8px;
+      }
+
+      .neirong {
+        display: flex;
+        justify-content: space-around;
+      }
+      .neirong span {
+        padding: 0 10px 5px;
+      }
+      .neirong span:nth-child(2) p {
+        line-height: 12vw;
+      }
+      .neirong img {
+        width: 100%;
+      }
+      .neirong p {
+        font-size: 3vw;
+        text-align: center;
+        line-height: 10vw;
+      }
+
+      .xiaoshuo,
+      .wenxue,
+      .qingchun {
+        background-color: #f5f5f5;
+        margin-top: 10px;
+        border-radius: 6px;
+      }
+      .dinbu {
+        display: flex;
+      }
+      .dinbu h3 {
+        flex-grow: 1;
+        font-size: 4vw;
+        padding-left: 8px;
+        line-height: 15vw;
+      }
+      .dinbu p {
+        text-align: right;
+        font-size: 3vw;
+        line-height: 15vw;
+        color: #a3a3a6;
+      }
+      .xiaoshuo ul,
+      .wenxue ul,
+      .qingchun ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .xiaoshuo li,
+      .wenxue li,
+      .qingchun li {
+        width: 33%;
+        font-size: 3vw;
+        text-align: center;
+        line-height: 10vw;
+        box-sizing: border-box;
+      }
+      .xiaoshuo li:nth-child(1),
+      .xiaoshuo li:nth-child(2),
+      .xiaoshuo li:nth-child(4),
+      .xiaoshuo li:nth-child(5),
+      .wenxue li:nth-child(1),
+      .wenxue li:nth-child(2),
+      .wenxue li:nth-child(4),
+      .wenxue li:nth-child(5),
+      .qingchun li:nth-child(1),
+      .qingchun li:nth-child(2),
+      .qingchun li:nth-child(4),
+      .qingchun li:nth-child(5) {
+        border-right: 3px solid #ededed;
+      }
+
+      /* 以下是下导航的css */
+      #bnav {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f1f1f1;/* 一定要设，没有则设为白色 */
+      z-index: 9;/*z轴的索引  固定定位的元素和绝对定位的元素重合在一起时，
+      谁挡住谁，z-index大的在上方  */
+      }
+      #bnav ul {
+      display: flex;
+      }
+      #bnav li{
+      width: 20%;
+      text-align: center;
+      }
+      #bnav div {
+      font-size: 6vw;
+      margin: 0 auto;
+      }
+      #bnav p {
+      font-size: 14px;
+      line-height: 24px;
+      color: #000;
+      }
+      #bnav li:nth-child(2) div,
+      #bnav li:nth-child(2) p {
+      color: #fd6662;
+      }
+
+
+      /* 以下是右侧顶部提示的css */
+      #top {
+        position: fixed;
+        right: 0;
+        bottom: 60px;
+        width: 50px;
+        display: none;
+      }
+      #top img {
+        width: 100%;
+      }

@@ -1,0 +1,210 @@
+body {
+  color: #f5f5f5;
+}
+/* 头部 */
+.channel-menu {
+  display: flex;
+  background-color: #fff;
+  padding: 10px 0;
+  flex-wrap: nowrap;
+}
+
+
+.left {
+  display: flex;
+  border-radius: 12px;
+  padding: 0 5px;
+  background-color: #efefef;
+  margin-right: 10px;
+  width: 25%;/* 占用太多空间时可以调宽度 */
+}
+
+.left span {
+  font-size: 3vw;
+  margin: 0 8px;
+  line-height: 11vw;
+  color: #000;
+}
+
+.left input {
+border: none;
+background-color: #efefef;
+width: 50%;/* 占用太多空间时可以调宽度 */
+}
+
+
+.tabs {
+  flex-grow: 1;
+  justify-content:space-around;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tabs a {
+padding: 0 16px;
+font-size: .6rem;
+font-weight: bold;
+line-height: 16px;
+}
+
+.tabs .cur {
+font-size: .8rem;
+font-weight: bold;
+border-bottom: 2px solid #c00;
+}
+
+.right {
+  display: flex;
+}
+
+.right a {
+  padding: 10px;
+  font-size: .7rem;
+}
+
+
+/* 内容区 滑动栏*/
+.tc {
+  display: none;
+  }
+
+.show {
+  display: block;
+  }
+
+.swiper-slide {
+  padding: 0 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #efefef;
+  padding-right: 5px;
+}
+.swiper-slide img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.swiper-slide a {
+  display: flex;
+}
+
+
+.subject {
+  font-size: .6rem;
+  font-weight: bold;
+  line-height: 5vw;
+  padding-top: 10px;
+}
+
+
+.append {
+  font-size: .2rem;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 14vw;
+  color: grey;
+}
+
+
+/* 内容区 推荐内容 */
+.recommend {
+  margin-top: 10px;
+}
+.jlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.jlist li {
+  width: 50%;
+  border: none;
+  border-radius: 14px;
+}
+.jlist img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.jlist p {
+  font-size: .6rem;
+  line-height: 150%;
+  text-align: center;
+  padding: 15px 5px;
+  font-weight: bold;
+}
+
+
+/* 以下是底部导航的css */
+#bnav {
+  position: fixed;
+  left: 0;                  
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f1;/* 一定要设，没有则设为白色 */
+  z-index: 9;/*z轴的索引  固定定位的元素和绝对定位的元素重合在一起时，
+  谁挡住谁，z-index大的在上方  */
+}
+#bnav ul {
+  display: flex;
+}
+#bnav li{
+  width: 20%;
+  text-align: center;
+}
+#bnav div {
+  font-size: 6vw;
+  margin: 0 auto;
+}
+#bnav p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+}
+#bnav li:nth-child(3) div,
+#bnav li:nth-child(3) p {
+  color: #fd6662;
+}
+
+
+
+
+
+
+
+/* ===== */
+.list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list li {
+  width: 100%;
+  margin: 4px;
+  position: relative;/* 用绝对定位，父元素一定要相对，不然就是相对于整个网页的位置 */
+}
+
+.list img {
+  width: 100%;
+  /* 尽量不给图片设宽高，而是设成100%，这样高度会跟着变 */
+}
+.list p {
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  font-size: 2vw;/* 14px */
+  color: #000;
+  line-height: 32px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* 新书速递 */
+.slider-wrapper {
+width: 100%;
+}
+.slider-wrapper img {
+width: 100%;
+display: block;
+}

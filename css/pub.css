@@ -1,0 +1,43 @@
+/* 全局CSS  */
+/* 电脑端手机端通用 */
+h1,h2,h3,h4,h5,h6,body,ul,p,form,dl,dd,dt { /* 不推荐用* */
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited {/* 超链接被点过后的颜色是紫色 */
+    color: #000;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+body {/* 电脑端特有 */
+    min-width: 320px;/* 不能再小了 */
+    /* min-width: 1200px;推荐不给 */
+    margin: 0 auto;/* 居中 */
+    overflow-x: hidden;/* 横向溢出 */
+}
+/* rem */
+html {
+    font-size: 5.4vw;
+}
+/* 第二种rem：media query */
+
+
+
+
+
+
+

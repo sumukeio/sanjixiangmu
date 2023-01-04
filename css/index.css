@@ -1,0 +1,210 @@
+        /* 以下是头部的css */
+        header {
+            display: flex;
+            background-color: #1791df;
+            padding: 25px 0;
+        }
+        header div {
+          display: flex;
+          flex-grow: 1;
+          background-color: #fff;
+          border-radius: 4.5vw;
+          margin: 0 5px;
+        }
+        header div span {
+          line-height: 8vw;
+          padding: 0 7px;
+        }
+        header input {
+            line-height: 8vw;
+            border: none;
+            flex-grow: 1;
+            outline: none;
+        }
+        header a {
+            font-size: 3vw;
+        }
+        .icon-dianpu,
+        .icon-message {
+            padding: 0 8px;
+        }
+
+        /* 以下是右侧浮窗的css */
+        aside>div{
+          position: fixed;
+          right: 0;
+          z-index: 10;
+          bottom: 200px;
+          width: 50px;
+        }
+        aside>div img {
+          width: 100%;
+        }
+
+        /* 以下是轮播图的css */
+        .swiper-slide img {
+          width: 100%;
+        }
+        /* 以下是页面主要内容的css */
+        main>img {
+          width: 100%;
+        }
+        .leibie {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .leibie li {
+          width: 16%;
+          padding: 5px;
+          flex-grow: 1;
+        }
+
+        .leibie li img {
+          width: 80%;
+          margin: 0 auto;
+        }
+        .leibie li p {
+          text-align: center;
+          font-size: 3vw;
+          font-weight: bold;
+          line-height: 5vw;
+          white-space: nowrap;
+        }
+        .leibie li:nth-child(3) img {
+          padding-bottom: 6px;
+        }
+        .leibie li:nth-child(4) img {
+          padding-bottom: 4px;
+        }
+        .leibie li:nth-child(5) img {
+          padding-bottom: 4px;
+        }
+        .leibie li:nth-child(7) img {
+          padding-top: 12px;
+          padding-bottom: 3px;
+        }
+        .leibie li:nth-child(8) img {
+          padding-bottom: 3px;
+        }
+        .leibie li:nth-child(9) img {
+          padding-bottom: 3px;
+        }
+
+
+        /* 以下是新人专享区的css */
+        .xinren {
+          background-color: #f00;
+          border-radius: 4%;
+          margin: 5px;
+        }
+        .xinren>div {
+          display: flex;
+        }
+        .xinren>div span:first-child {
+          color: gold;
+          font: italic bold 5vw 'YouYuan';
+          padding-left: 8px;
+          line-height: 9vw;
+        }
+        .xinren>div p {
+          color: #fff;
+          font-size: 3vw;
+          flex-grow: 1;
+          padding-left: 10px;
+          line-height: 9vw;
+        }
+        .xinren>div span:last-child {
+          color: #f00;
+          font-size: 3vw;
+          text-align: right;
+          line-height: 9vw;
+          background-color: #fff;
+          border-radius: 14px;
+          font-weight: bold;
+          margin: 8px 0;
+          padding: 0 5px;
+          box-sizing: border-box;
+        }
+        .xinren ul {
+          display: flex;
+          flex-wrap: wrap;
+          background-color: #fff;
+        }
+        .xinren li {
+          width: 25%;
+          padding-right: 3px;
+          box-sizing: border-box;
+        }
+        .alist img {
+          width: 100%;
+        }
+        .alist p {
+          font-size: 3vw;
+          text-align: center;
+        }
+        .alist div {
+          display: flex;
+          font-size: 4vw;
+          background-color: #fcddde;
+          border-radius: 11px;
+        }
+        .alist div span:first-child {
+          flex-grow: 1;
+          color: #f00;
+        }
+        .alist div span:last-child {
+          text-align: right;
+          padding: 0 10px;
+          background-color: #f00;
+          border-radius: 12px;
+          color: #fff;
+          font-size: 3vw;
+        }
+        .tushu img {
+          width: 100%;
+        }
+
+
+
+        /* 以下是下导航的css */
+        #bnav {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;/* 一定要设，没有则设为白色 */
+        z-index: 9;/*z轴的索引  固定定位的元素和绝对定位的元素重合在一起时，
+        谁挡住谁，z-index大的在上方  */
+        }
+        #bnav ul {
+        display: flex;
+        }
+        #bnav li{
+        width: 20%;
+        text-align: center;
+        }
+        #bnav div {
+        font-size: 6vw;
+        margin: 0 auto;
+        }
+        #bnav p {
+        font-size: 14px;
+        line-height: 24px;
+        color: #000;
+        }
+        #bnav li:first-child div,
+        #bnav li:first-child p {
+        color: #fd6662;
+        }
+
+        /* 以下是页面弹出优惠券窗口的css */
+        .yhq {
+          width: 200px;
+          position: fixed;
+          top: 50px;
+          left: 125px;
+          z-index: 10;
+        }
+        .yhq img {
+          width: 100%;
+        }
